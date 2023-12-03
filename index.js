@@ -51,9 +51,10 @@ app.get("/", (req, res) => {
 /* ROUTES */
 app.use("/auth", authRoutes); // use authentication routes
 app.use("/users", userRoutes); // use user routes
+app.use("/recipe", SavedRecipes);
 
 //MONGOOSE SETUP
-const PORT = process.env.PORT || 6001; // set server port
+const PORT = process.env.PORT || 7000; // set server port
 
 const startServer = async () => {
   try {
